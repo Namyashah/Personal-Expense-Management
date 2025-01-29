@@ -3,18 +3,16 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from time import sleep
-
-
 class OnlineTracker:
-    def tracker(self):
+    def __init__(self):
         while True:
             print("Choose An Operations:")
             print("1.Online Expense tracker.")
             print("2.Back To Main Menu.")
 
-            self.choice = int(input("Enter your choice = "))
+            self.Choose = int(input("Enter your Choose = "))
 
-            if self.choice==1:
+            if self.Choose==1:
                 my_options = Options()
                 my_options.add_experimental_option("detach",True)
                 my_options.add_argument("--start-maximized")
@@ -42,7 +40,7 @@ class OnlineTracker:
                     print("Login Unsucessfull!")
                     print("=============================")
 
-            elif self.choice==2:
+            elif self.Choose==2:
                 print("Loading Main Menu!")
                 print("Please Wait!")
                 print("==============================")
@@ -50,5 +48,3 @@ class OnlineTracker:
             else:
                 print("Invalid Input!Enter Proper Input!")
                 print("=====================================")
-o1 = OnlineTracker()
-o1.tracker()

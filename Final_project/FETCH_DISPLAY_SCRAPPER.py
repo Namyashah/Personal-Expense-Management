@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 class NewsScrapper:
-    def news(self):
+    def __init__(self):
         while True:
             print("Choose An Operations:")
             print("1.Financial News.")

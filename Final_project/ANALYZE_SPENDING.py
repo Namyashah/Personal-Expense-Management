@@ -1,7 +1,7 @@
 import subprocess as sub
 import time
 class SpendingHabits:
-    def analyzing(self):
+    def __init__(self):
         while True:
             print("Choose An Operations:")
             print("1.Visualize Through Excel Bar chart.")

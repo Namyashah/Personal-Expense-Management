@@ -75,29 +75,33 @@ class Add_View_Categorize:
             print("Your Expense List Is Empty!")
             print("======================================")
     def category_expense(self):
-        while True:
-            print("Choose An Operations:")
-            print("1.Show Categort Vise.")
-            print("2.Back To Page-2")
+        if expense_list:
+            while True:
+                print("Choose An Operations:")
+                print("1.Show Categort Vise.")
+                print("2.Back To Page-2")
 
-            self.choice = int(input("Enter your choice = "))
+                self.choice = int(input("Enter your choice = "))
 
-            if self.choice==1:
-                category_input = input("Enter the category You want to search = ")
-                for i in expense_list:
-                    if category_input==i["Category"]:
-                        print(f"Expense_no = {i["Expense_no"]}")
-                        print(f"Amount = {i["Amount"]}")
-                        print(f"Category = {i["Category"]}")
-                        print(f"Date = {i["Date"]}")
-                        print("======================================")
-            elif self.choice==2:
-                print("Loading Page-2.")
-                print("========================")
-                break
-            else:
-                print("Invalid Input!Enter Proper Input!")
-                print("==================================")
+                if self.choice==1:
+                    category_input = input("Enter the category You want to search = ")
+                    for i in expense_list:
+                        if category_input==i["Category"]:
+                            print(f"Expense_no = {i["Expense_no"]}")
+                            print(f"Amount = {i["Amount"]}")
+                            print(f"Category = {i["Category"]}")
+                            print(f"Date = {i["Date"]}")
+                            print("======================================")
+                elif self.choice==2:
+                    print("Loading Page-2.")
+                    print("========================")
+                    break
+                else:
+                    print("Invalid Input!Enter Proper Input!")
+                    print("==================================")
+        else:
+            print("Your List Is Empty!")
+            print("===================================")
     def total_expense(self):
         c = 0
         for i in expense_list:

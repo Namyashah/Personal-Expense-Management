@@ -22,13 +22,13 @@ class FinanceManager:
                 Add_View_Categorize()
             elif self.choice==2:
                 print("==============================")
-                SpendingHabits.analyzing()
+                SpendingHabits()
             elif self.choice==3:
                 print("===============================")
-                NewsScrapper.news(self)
+                NewsScrapper()
             elif self.choice==4:
                 print("===============================")
-                OnlineTracker.tracker(self)
+                OnlineTracker()
             elif self.choice==5:
                 self.choice = input("Do You Want To Exit Personal Finance Management(yes\no) = ").lower()
                 if self.choice=="yes":
